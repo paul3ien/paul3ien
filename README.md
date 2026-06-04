@@ -1,6 +1,6 @@
 <div align="center">
 
-# Paul Chrétien
+# Paul CHRETIEN
 
 **Élève Ingénieur — Télécom Saint-Étienne**  
 Systèmes performants · Inférence embarquée · Architecture logicielle
@@ -81,14 +81,12 @@ Direct Objective-C FFI bindings to `VZVirtualMachine`, EFI boot with persistent 
 
 ---
 
-## Stats
+<!-- Github Stats Section -->
 
-<div align="center">
+<a href="https://github.com/paul3ien">
+  <img align="center" src="https://vercel-stats-blue.vercel.app/api/top-langs/?username=paul3ien&layout=compact&count_private=true&theme=github_dark&hide_border=true&langs_count=8" alt="Most Used Languages" />
+</a>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=paul3ien&show_icons=true&theme=github_dark&hide_border=true&rank_icon=github&cache_seconds=1800)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=paul3ien&layout=compact&theme=github_dark&hide_border=true&langs_count=8&cache_seconds=1800)
-
-</div>
 
 ---
 
