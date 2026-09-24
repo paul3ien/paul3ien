@@ -5,7 +5,7 @@
 **Élève Ingénieur — Télécom Saint-Étienne**  
 Systèmes performants · Inférence embarquée · Architecture logicielle
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-paul--chretien-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/paul-chretien)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-paul--chretien-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/paul-chretien2)
 [![Email](https://img.shields.io/badge/Email-paul.chretien.69@gmail.com-EA4335?style=flat-square&logo=gmail)](mailto:paul.chretien.69@gmail.com)
 [![Location](https://img.shields.io/badge/Lyon%2C_France-📍-lightgrey?style=flat-square)](#)
 [![Open to](https://img.shields.io/badge/Open_to-Stage_5_mois_été_2026-22c55e?style=flat-square)](#)
