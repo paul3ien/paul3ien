@@ -81,6 +81,44 @@ Direct Objective-C FFI bindings to `VZVirtualMachine`, EFI boot with persistent 
 
 ---
 
+### [documentation-rag](https://github.com/paul3ien/documentation-rag) — RAG over technical documentation
+
+_Grounded answers from your own docs — with a multi-agent web fallback for what's missing._
+
+End-to-end local RAG: PDF/Markdown documents are chunked and indexed twice — dense vectors (Qdrant + `fastembed`) and a lexical index (BM25) — then fused with Reciprocal Rank Fusion. A local LLM (Ollama) answers **strictly** from the retrieved context, never adding outside knowledge. When the corpus can't answer, a multi-agent fallback (LangChain + DeepSeek) searches the web, downloads and reads the document, rewrites a concise, self-reviewed summary, and folds it back into the corpus — then re-indexes so the classic RAG can retrieve it. Quality is measured with RAGAS and tracked in MLflow; the pipeline is reproducible with DVC.
+
+```
+docs → chunk ─┬─ Qdrant (fastembed) ─┐
+              └─ BM25 (rank-bm25)  ─┴─ RRF → Ollama (strict) → answer
+                       │ answer absent
+                       ▼
+   LangChain + DeepSeek → DuckDuckGo search → read PDF → rewrite + self-review
+                        → save to corpus → re-index
+```
+
+---
+
+| Metric | Value |
+| --- | --- |
+| Faithfulness (RAGAS) | 0.92 |
+| Context precision (RAGAS) | 0.82 |
+| Answer relevancy (RAGAS) | 0.89 |
+| Test suite | 40 passing |
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi)
+![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=flat-square&logo=qdrant)
+![fastembed](https://img.shields.io/badge/fastembed-F59E0B?style=flat-square)
+![BM25](https://img.shields.io/badge/BM25-0EA5E9?style=flat-square)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain)
+![DuckDuckGo](https://img.shields.io/badge/DuckDuckGo-DE5833?style=flat-square&logo=duckduckgo)
+![RAGAS](https://img.shields.io/badge/RAGAS-8B5CF6?style=flat-square)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow)
+![DVC](https://img.shields.io/badge/DVC-13ADC7?style=flat-square&logo=dvc)
+
+
+
 <!-- Github Stats Section -->
 
 <a href="https://github.com/paul3ien">
